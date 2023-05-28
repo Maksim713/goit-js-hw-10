@@ -10,9 +10,9 @@ import { fetchBreeds, fetchCatByBreed } from './js/cat-api.js';
 refs.input.addEventListener('change', onInputChange);
 
 function onInputChange(e) {
-  const selectValue = e.currentTarget.value;
+  const currentValue = e.currentTarget.value;
 
-  if (selectValue === '') {
+  if (currentValue === '') {
     downloadError();
     refs.infoConteiner.classList.add('is-hidden');
     return;
@@ -28,9 +28,9 @@ function onInputChange(e) {
     .catch(loadError);
 }
 
-fetchBreeds()
+console.log(fetchBreeds()
   .then(response => {
     uploadedBreeds();
     fillInTheSelected(response);
   })
-  .catch(loadError);
+  .catch(loadError));
