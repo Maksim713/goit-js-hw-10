@@ -1,4 +1,4 @@
-import { refs } from './Download.js';
+import { refs } from './download.js';
 
 export function fillingInfoAboutCat({ url, breed }) {
   refs.catImg.src = `${url}`;

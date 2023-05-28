@@ -1,7 +1,7 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const refs = {
-  input: document.getElementsByClassName('breed-select'),
+  input: document.querySelector('.breed-select'),
   loaderText: document.getElementsByClassName('loader'),
   errorText: document.getElementsByClassName('error'),
   catInfo: document.getElementsByClassName('cat-info'),

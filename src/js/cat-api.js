@@ -1,4 +1,4 @@
-import { refs, download, downloadBreeds } from './Download.js';
+import { refs, download, downloadBreeds } from './download.js';
 
 const BASE__URL = 'https://api.thecatapi.com/v1';
 const API__KEY =

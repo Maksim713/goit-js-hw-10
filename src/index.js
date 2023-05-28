@@ -1,6 +1,11 @@
-import { fillingInfoAboutCat, fillInTheSelected } from './js/filling';
+import {
+  refs,
+  uploadedBreeds,
+  uploaded,
+  downloadError,
+} from './js/download.js';
+import { fillingInfoAboutCat, fillInTheSelected } from './js/filling.js';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api.js';
-import { refs, uploadedBreeds, uploaded, loadError } from './js/Download.js';
 
 refs.input.addEventListener('change', onInputChange);
 
@@ -8,7 +13,7 @@ function onInputChange(e) {
   const selectValue = e.currentTarget.value;
 
   if (selectValue === '') {
-    loadError();
+    downloadError();
     refs.infoConteiner.classList.add('is-hidden');
     return;
   }
