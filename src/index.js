@@ -18,19 +18,19 @@ function onInputChange(e) {
     return;
   }
 
-  fetchCatByBreed(selectValue)
+  fetchCatByBreed(currentValue)
     .then(response => {
       const url = response[0].url;
       const breed = response[0].breeds[0];
       fillingInfoAboutCat({ url, breed });
       uploaded();
     })
-    .catch(loadError);
+    .catch(downloadError);
 }
 
-console.log(fetchBreeds()
+fetchBreeds()
   .then(response => {
     uploadedBreeds();
     fillInTheSelected(response);
   })
-  .catch(loadError));
+  .catch(downloadError);

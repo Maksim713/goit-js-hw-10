@@ -2,13 +2,13 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const refs = {
   input: document.querySelector('.breed-select'),
-  loaderText: document.getElementsByClassName('loader'),
-  errorText: document.getElementsByClassName('error'),
-  catInfo: document.getElementsByClassName('cat-info'),
-  catImg: document.getElementsByClassName('cat-info > img'),
-  breedTitle: document.getElementsByClassName('cat-info-title'),
-  breedDescription: document.getElementsByClassName('cat-info-description'),
-  breedTemtText: document.getElementsByClassName('cat-info-temperament-text'),
+  loaderText: document.querySelector('.loader'),
+  errorText: document.querySelector('.error'),
+  catInfo: document.querySelector('.cat-info'),
+  catImg: document.querySelector('.cat-info > img'),
+  breedTitle: document.querySelector('.cat-info-title'),
+  breedDescription: document.querySelector('.cat-info-description'),
+  breedTemtText: document.querySelector('.cat-info-temperament-text'),
 };
 
 Notify.init({
